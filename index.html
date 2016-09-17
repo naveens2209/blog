@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+ <title>BEARly Speaking | Devdutt Shenoi</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Welcome to my blog folks. This is where the talking is done!">
+</head>
+<body>
+<ul class="topnav" id="myTopnav">
+  <li><a href="http://devdutt.ga">Home</a></li>
+  <li><a href="#">Blog</a></li>
+  <li><a href="http://devdutt.ga/about.html">About</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</body>
+</html>
