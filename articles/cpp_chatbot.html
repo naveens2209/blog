@@ -44,7 +44,7 @@
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-		<div id="fh5co-aside" style="background-image: url(../images/image_2.jpg)" data-stellar-background-ratio="0.5">
+		<div id="fh5co-aside" style="background-image: url(../images/cppbot.JPG)" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<nav role="navigation">
 				<ul>
@@ -52,7 +52,7 @@
 				</ul>
 			</nav>
 			<div class="page-title">
-				<img src="../images/person_1.jpg" alt="C++ Chatbot, with games and much more built-in">
+				<img src="http://devdutt.ga/images/photo.jpg" alt="C++ Chatbot, with games and much more built-in">
 				<span>October 28, 2016</span>
 				<h2>How to build a Chatbot in C++</h2>
 			</div>
@@ -61,127 +61,122 @@
 			<div class="fh5co-post">
 				<div class="fh5co-entry padding">
 					<div>
-						#include <iostream>
-						#include <string>
-						#include <process.h>
-						#include <fstream>
-						#ifndef _BOT_H
-						#define _BOT_H
+						<pre class='brush: cpp'>
+	#include <iostream>
+	#include <string>
+	#include <process.h>
+	#include <fstream>
+	#ifndef _BOT_H
+	#define _BOT_H
 
-						using namespace std;
+	using namespace std;
 
-						/*
-						    reply is method of bot class which checks for the perfect output to query.
-						    If match is found, output stored below initial input is used.
-						    If the output cannot be found, bot repeats input and prompts User to enter an ideal output.
-						    This output will be stored in a memory textfile using fstream.h headerfile along with initial input.
-						*/
+	/*
+	reply is method of bot class which checks for the perfect output to query.
+	If match is found, output stored below initial input is used.
+	If the output cannot be found, bot repeats input and prompts User to enter an ideal output.
+	This output will be stored in a memory textfile using fstream.h headerfile along with initial input.
+	*/
 
-						class bot{
-						  string id, re, ideal, Name, UserName;
-						public:
-						    //Constuctor to make object of bot.
-						    bot (string U){
-						      Name == "V";
-						      UserName == U;
-						    }
-						    void reply(string input){
-						        fstream M;
-						        M.open("memory.txt", ios::in);    // Open the textfile for input.
+	class bot{
+	  string id, re, ideal, Name, UserName;
+	 public:
+	  //Constuctor to make object of bot.
+	  bot (string U){
+	    Name == "V";
+		  UserName == U;
+		}
+	  void reply(string input){
+		  fstream M;
+		  M.open("memory.txt", ios::in);    // Open the textfile for input.
 
-						        // Search through the file until end is reached.
-						        while( !M.eof() ) {
-						            getline(M,id);    // Get next input.
+	    // Search through the file until end is reached.
+	    while( !M.eof() ) {
+	      getline(M,id);    // Get next input.
+  		  // Check whether id is what we are looking for.
+			  if(id == input) {
+		      getline(M,re);   // If so, get related reply.
+		      cout << re ;
+		      return;
+		    }
+	    }
 
-						            // Check whether id is what we are looking for.
-						            if(id == input) {
-						                getline(M,re);   // If so, get related reply.
-						                cout << re ;
-						                return;
-						            }
-						        }
+	      M.close();    // If reply couldn't find the input in the textfile. Close it!
+	      M.open("memory.txt", ios::out | ios::app);    // Open memory.txt for output, and use append at end of file.
+	      M << input << endl;   // Record initial input in memory.
+	      cout << "I don't know what you mean when you say \'" << input << "\', what should I say?\n\tIDEAL REPLY (PLEASE INPUT) : ";
+	      getline(cin,ideal);    // Get the ideal output.
+	      M << ideal << endl;    // Write the ideal output to memory.
+	      M.close();    // Close the file!
+	    }    // Teach AI to reply.
 
-						        M.close();    // If reply couldn't find the input in the textfile. Close it!
-						        M.open("memory.txt", ios::out | ios::app);    // Open memory.txt for output, and use append at end of file.
-						        M << input << endl;   // Record initial input in memory.
-						        cout << "I don't know what you mean when you say \'" << input << "\', what should I say?\n\tIDEAL REPLY (PLEASE INPUT) : ";
-						        getline(cin,ideal);    // Get the ideal output.
-						        M << ideal << endl;    // Write the ideal output to memory.
-						        M.close();    // Close the file!
-						    }    // Teach AI to reply.
+	  void whatname() {
+	    cout << Name;
+	  }
+	  void whatun(){
+	    cout << UserName;
+	  }
+	};
 
-						    void whatname() {
-						      cout << Name;
-						    }
-						    void whatun(){
-						      cout << UserName;
-						    }
-						};
+	// Prototype of game functions that can be activated when the User wants to game.
 
-						// Prototype of game functions that can be activated when the User wants to game.
+	void quiz();
+  void snake();
+	#endif
+	// End definition of class bot
 
-						void quiz();
-						void snake();
+	int main() {
+		string UserName;
 
-						#endif
-						// End definition of class bot
+		// Start program message.
+		cout << "\n\n\n\t\tHey there, this is Devdutt\n\n\nBefore you start to chat with my bot, can I get your name?\n" << endl;
+		cin>>UserName;
 
-						int main() {
-						    string UserName;
+		bot AI(UserName);    // Generate AI through bot API.
 
-						    // Start program message.
-						    cout << "\n\n\n\t\tHey there, this is Devdutt\n\n\nBefore you start to chat with my bot, can I get your name?\n" << endl;
-						    cin>>UserName;
+		for(;;) {
+			cout << "\nUSER: ";    // Prompt User for input.
+			string input;    // Using String.h header to Create objects of strings to contain statements.
+			getline(cin, input);    // Input for input variable from the console with getline.
+			if (input == "Hello"||input == "hello"||input == "Hi"||input == "hi") {
+				cout << "Hello there ";
+			  AI.whatun();
+			}
+			// Let the User decide whether to exit the program.
+			else if (input == "exit"||input == "Exit") {
+				exit(0);
+			}
+			// If User inputs game let him play either a quiz or snake.
+			else if (input ==  "Game"||input == "game") {
+			int c;
+			cout << "What do you want to play?\n\n\t1. Quiz\n\t2. Snake\n\nInput the number of your option:";
+			cin >> c;
+			// Using Switch to choose perfect game function to execute.
+			switch (c) {
+				case 1 : quiz();
+				case 2 : snake();
+			}
+			}
+			else if (input == "name"|| input == "Name") {
+				cout <<"My name is ";
+				AI.whatname();
+				cout <<" and You are ";
+				AI.whatun();
+			}
+			//Only if the User doen't want to exit or play a game should his question go to the AI.
+			else {
+				cout << "AI: ";
+			AI.reply(input);    // Pass User's input to the AI and let it respond.
+		}
+	}
+}
 
-						    bot AI(UserName);    // Generate AI through bot API.
+// Definitions pertaining to game functions.
 
-						    for(;;) {
-						        cout << "\nUSER: ";    // Prompt User for input.
-						        string input;    // Using String.h header to Create objects of strings to contain statements.
-						        getline(cin, input);    // Input for input variable from the console with getline.
-						        if (input == "Hello"||input == "hello"||input == "Hi"||input == "hi") {
-						          cout << "Hello there ";
-						          AI.whatun();
-						        }
-						        // Let the User decide whether to exit the program.
-						        else if (input == "exit"||input == "Exit") {
-						          exit(0);
-						        }
-						        // If User inputs game let him play either a quiz or snake.
-						        else if (input ==  "Game"||input == "game") {
-						          int c;
-						          cout << "What do you want to play?\n\n\t1. Quiz\n\t2. Snake\n\nInput the number of your option:";
-						          cin >> c;
-						          // Using Switch to choose perfect game function to execute.
-						          switch (c) {
-						            case 1 : quiz();
-						            case 2 : snake();
-						          }
-						        }
-						        else if (input == "name"|| input == "Name") {
-						          cout <<"My name is ";
-						          AI.whatname();
-						          cout <<" and You are ";
-						          AI.whatun();
-						        }
-						        //Only if the User doen't want to exit or play a game should his question go to the AI.
-						        else {
-						          cout << "AI: ";
-						          AI.reply(input);    // Pass User's input to the AI and let it respond.
-						        }
 
-						    }
-						}
-
-						// Definitions pertaining to game functions.
-
-						void quiz() {
-
-						}
-						void snake() {
-
-						}
-
+void quiz() {}
+void snake() {}
+						</pre>
 					</div>
 				</div>
 
@@ -232,6 +227,11 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+  <!--
+
+	Syntax Highlighter
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js" charset="utf-8"></script>
+  -->
 
 	<!-- jQuery -->
 	<script src="../js/jquery.min.js"></script>
