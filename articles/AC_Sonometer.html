@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AC Sonometer | BEARly speaking</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Here is code written in C++ that helps you cheat in your Physics Experiment in the 12th grade" />
+	<meta name="keywords" content="Devdutt Shenoi, bearly speaking, coding, tutorials, C++, How to, code" />
+	<meta name="author" content="Devdutt Shenoi" />
+
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="../js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body class="single">
+
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url(../images/accpp.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<nav role="navigation">
+				<ul>
+					<li><a href="../index.html"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+			<div class="page-title">
+				<img src="http://devdutt.ga/images/photo.jpg" alt="Devdutt Shenoi">
+				<span>July 16, 2016</span>
+				<h2>Building a C++ Application to cheat the readings</h2>
+			</div>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post">
+				<div class="fh5co-entry padding">
+					<div>
+						<pre>
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+float calc(float t,float u,float l){
+	return sqrt(t)/(2*l*sqrt(u));
+}
+float ten(float x){
+  return x*0.0098;
+}
+float com(float x1, float x2){
+  return(x1+x2)/200;
+}
+int main()
+{
+	int w;
+	float n,t,u,l1,l2,l;
+	cout<<"Calculate Frequency of AC from lengths on Sonometer!!\n";
+	cout<<"What are the lengths?(cm)\nl.1:";
+	cin>>l1;
+	cout<<"l.2:";
+	cin>>l2;
+	l=com(l1,l2);
+	cout<<"Mean length = "<< l <<" What is the value of weights(g)? ";
+	cin>>w;
+	t= ten(w);
+	cout<<"Tension = "<< t;
+	cout<<" Kgm/s\nWhat is the value of linear density of wire U(g/m)?\n";
+	cin>>u;
+	n=calc(t,u,l);
+	cout<<"\nTherefore frequency of AC is "<< n <<" Hz\n";
+	return 0;
+}
+						</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="fh5co-navigation">
+		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(../images/cppbot.jpg)">
+			<div class="overlay"></div>
+			<a class="copy" href="cpp_chatbot.html">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Next Post</span>
+							<h2>How to build a Chatbot in C++</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	</div>
+
+	<footer>
+		<div>
+			&copy; 2016 Devdutt Shenoi. All Rights Reserved. <br>Design Inspired from Story by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> check them out!</br>
+		</div>
+	</footer>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="../js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="../js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="../js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="../js/main.js"></script>
+
+</body>
+
+</html>
