@@ -10,20 +10,9 @@
 	<meta name="keywords" content="Devdutt Shenoi, bearly speaking," />
 	<meta name="author" content="Devdutt Shenoi" />
 
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
 	<!--Favicons-->
-	<link href=http://devdutt.ga/images/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
-	<link href=http://devdutt.ga/images/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
+	<link href=http://devdutt.ga/images/favicon.png rel=icon sizes=500x500 type=image/png>
+	<link href=http://devdutt.ga/images/favicon.ico rel=icon sizes=16x16 type=image/ico>
 
 	<!--Google Font-->
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
@@ -75,7 +64,7 @@
 				</ul>
 			</nav>
 			<div class="page-title">
-				<img src="http://devdutt.ga/images/photo.jpg" alt="Devdutt Shenoi">
+				<img src="http://devdutt.ga/images/avatar.jpg" alt="Devdutt Shenoi">
 				<span>Date, year</span>
 				<h2>Title</h2>
 			</div>
@@ -104,6 +93,25 @@
 				</a>
 
 			</div>
+
+			<section class=comments>
+				<div id="disqus_thread"></div>
+				<script>
+					var disqus_config = function() {
+						this.page.url = http://devdutt.ga/blog/; // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					};
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document,
+							s = d.createElement('script');
+						s.src = '//vimag.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the comments.</noscript>
+			</section>
+
 			<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(../images/jpg)">
 				<div class="overlay"></div>
 				<a class="copy" href="#">
@@ -119,24 +127,6 @@
 
 			</div>
 		</div>
-
-		<section class=comments>
-			<div id="disqus_thread"></div>
-			<script>
-				var disqus_config = function() {
-					this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-				};
-				(function() { // DON'T EDIT BELOW THIS LINE
-					var d = document,
-						s = d.createElement('script');
-					s.src = '//vimag.disqus.com/embed.js';
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-				})();
-			</script>
-			<noscript>Please enable JavaScript to view the comments.</noscript>
-		</section>
 
 		<footer>
 			<div>

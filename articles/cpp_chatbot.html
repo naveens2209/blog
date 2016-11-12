@@ -10,20 +10,9 @@
 	<meta name="keywords" content="Devdutt Shenoi, bearly speaking, coding, tutorials, C++, How to, code" />
 	<meta name="author" content="Devdutt Shenoi" />
 
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
 	<!--Favicons-->
-	<link href=http://devdutt.ga/images/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
-	<link href=http://devdutt.ga/images/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
-
+	<link href=http://devdutt.ga/images/favicon.png rel=icon sizes=500x500 type=image/png>
+	<link href=http://devdutt.ga/images/favicon.ico rel=icon sizes=16x16 type=image/ico>
 	<!--Google Font-->
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
 	<!-- Animate.css -->
@@ -45,14 +34,20 @@
 
 	<!--Google Analytics-->
 	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-	ga('create', 'UA-86786973-2', 'auto');
-	ga('send', 'pageview');
-
+		ga('create', 'UA-86786973-2', 'auto');
+		ga('send', 'pageview');
 	</script>
 
 </head>
@@ -68,7 +63,7 @@
 				</ul>
 			</nav>
 			<div class="page-title">
-				<img src="http://devdutt.ga/images/photo.jpg" alt="Devdutt Shenoi">
+				<img src="http://devdutt.ga/images/avatar.jpg" alt="Devdutt Shenoi">
 				<span>October 28, 2016</span>
 				<h2>How to build a Chatbot in C++</h2>
 			</div>
@@ -77,69 +72,70 @@
 			<div class="fh5co-post">
 				<div class="fh5co-entry padding">
 					<div>
-						<pre>#include <iostream>
+						<p>
+							<strong>Step 1:</strong> As any other C++ file begins start with the include statements
+						</p>
+						<pre>#include &#60;iostream&#62;
 #include &#60;string&#62;
 #include &#60;process.h&#62;
 #include &#60;fstream&#62;
-#ifndef _BOT_H
-#define _BOT_H
 
 using namespace std;
+</pre>
+						<p>
+							<strong>Step 2:</strong> reply is method of bot class which checks for the perfect output to query. If match is found, output stored below initial input is used. If the output cannot be found, bot repeats input and prompts User to enter an ideal
+							output. This output will be stored in a memory textfile using fstream.h headerfile along with initial input.
 
-/*
-reply is method of bot class which checks for the perfect output to query.
-If match is found, output stored below initial input is used.
-If the output cannot be found, bot repeats input and prompts User to enter an ideal output.
-This output will be stored in a memory textfile using fstream.h headerfile along with initial input.
-*/
-
+						</p>
+						<pre>
 class bot{
 	string id, re, ideal, Name, UserName;
  public:
 	//Constuctor to make object of bot.
-  bot (string U){
-	  Name == "V";
-		UserName == U;
-	}
+	bot (string U){
+	Name == "V";
+	UserName == U;
+  }
 	void reply(string input)   // Teach AI to reply.
 	{
 	  fstream M;
 	  M.open("memory.txt", ios::in);    // Open the textfile for input.
-    // Search through the file until end is reached.
-    while( !M.eof() ) {
-      getline(M,id);    // Get next input.
-		  // Check whether id is what we are looking for.
-		  if(id == input) {
-	      getline(M,re);   // If so, get related reply.
+	  // Search through the file until end is reached.
+	  while( !M.eof() ) {
+	    getline(M,id);    // Get next input.
+	    // Check whether id is what we are looking for.
+	    if(id == input) {
+        getline(M,re);   // If so, get related reply.
 	      cout << re ;
 	      return;
 	    }
-    }
-    M.close();    // If reply couldn't find the input in the textfile. Close it!
-    M.open("memory.txt", ios::out | ios::app);    // Open memory.txt for output, and use append at end of file.
-    M << input << endl;   // Record initial input in memory.
-    cout << "I don't know what you mean when you say \'" << input << "\', what should I say?\n\tIDEAL REPLY (PLEASE INPUT) : ";
-    getline(cin,ideal);    // Get the ideal output.
-    M << ideal << endl;    // Write the ideal output to memory.
-    M.close();    // Close the file!
+	  }
+  	M.close();    // If reply couldn't find the input in the textfile. Close it!
+  	M.open("memory.txt", ios::out | ios::app);    // Open memory.txt for output, and use append at end of file.
+  	M << input << endl;   // Record initial input in memory.
+  	cout << "I don't know what you mean when you say \'" << input << "\', what should I say?\n\tIDEAL REPLY (PLEASE INPUT) : ";
+  	getline(cin,ideal);    // Get the ideal output.
+  	M << ideal << endl;    // Write the ideal output to memory.
+  	M.close();    // Close the file!
   }
-
   void whatname() {
-    cout << Name;
+  	cout << Name;
   }
   void whatun(){
-    cout << UserName;
+  	cout << UserName;
   }
 };
-
-// Prototype of game functions that can be activated when the User wants to game.
-
-void quiz();
+</pre>
+						<p>
+							<strong>Step 3:</strong> Create some functions that can be activated from within the program.
+						</p>
+						<pre>void quiz();
 void snake();
-#endif
-// End definition of class bot
-
-int main() {
+</pre>
+						<p>
+							<strong>Step 4:</strong> The main function of the program will run the loop that is the chat.
+						</p>
+						<pre>int main() {
 	string UserName;
 
 	// Start program message.
@@ -183,13 +179,7 @@ int main() {
 			AI.reply(input);    // Pass User's input to the AI and let it respond.
 		}
 	}
-}
-
-// Definitions pertaining to game functions.
-
-
-void quiz() {}
-void snake() {}</pre>
+}</pre>
 					</div>
 				</div>
 
@@ -198,6 +188,24 @@ void snake() {}</pre>
 			</div>
 		</div>
 	</div>
+
+	<section class=comments>
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_config = function() {
+				this.page.url = http: //devdutt.ga/blog/articles/cpp_chatbot.html;  // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document,
+					s = d.createElement('script');
+				s.src = '//bearly-speaking.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the comments.</noscript>
+	</section>
 
 	<div class="fh5co-navigation">
 		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(../images/accpp.jpg)">
@@ -216,24 +224,6 @@ void snake() {}</pre>
 
 		</div>
 	</div>
-
-	<section class=comments>
-		<div id="disqus_thread"></div>
-		<script>
-			var disqus_config = function () {
-			this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-			};
-			(function() { // DON'T EDIT BELOW THIS LINE
-				var d = document,
-					s = d.createElement('script');
-				s.src = '//vimag.disqus.com/embed.js';
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view the comments.</noscript>
-	</section>
 
 	<footer>
 		<div>
