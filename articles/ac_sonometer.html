@@ -35,15 +35,21 @@
 
 	<!--Google Analytics-->
 	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-86786973-2', 'auto');
-  ga('send', 'pageview');
-
-  </script>
+		ga('create', 'UA-86786973-2', 'auto');
+		ga('send', 'pageview');
+	</script>
 
 </head>
 
@@ -67,7 +73,7 @@
 			<div class="fh5co-post">
 				<div class="fh5co-entry padding">
 					<div>
-						<pre><code class="language-cpp">#include &#60;iostream&#62;
+						<pre class="prettify lang-cpp">#include &#60;iostream&#62;
 #include &#60;math.h&#62;
 
 using namespace std;
@@ -102,12 +108,48 @@ int main()
 	return 0;
 }</code></pre>
 					</div>
+					<div id="disqus_thread"></div>
+					<script>
+						/**
+						 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+						 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+						 */
+
+						var disqus_config = function() {
+							this.page.url = 'http://devdutt.ga/blog/articles/ac_sonometer.html'; // Replace PAGE_URL with your page's canonical URL variable
+							this.page.identifier = 'Building a C++ Application to cheat the readings'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						};
+
+						(function() { // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+							var d = document,
+								s = d.createElement('script');
+
+							s.src = '//bearly-speaking.disqus.com/embed.js'; // IMPORTANT: Replace EXAMPLE with your forum shortname!
+
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+						})();
+					</script>
+					<noscript>Please enable JavaScript to view comments. <a href="https://disqus.com/?ref_noscript" rel="nofollow">these comments are powered by Disqus.</a></noscript>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="fh5co-navigation">
+		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(https://cdn-images-1.medium.com/max/800/0*7Lxlqlw_35wxFGIi.png)">
+			<div class="overlay"></div>
+			<a class="copy" href="https://geekhub.ga/codes-are-magic-spells-7197dd63e6b1#.yiiianvb2">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Previous Post</span>
+							<h2>Codes are Magic spells</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
 		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(../images/cppbot.jpg)">
 			<div class="overlay"></div>
 			<a class="copy" href="cpp_chatbot.html">
@@ -121,26 +163,9 @@ int main()
 				</div>
 			</a>
 		</div>
-	</div>
-	</div>
 
-	<section class=comments>
-		<div id="disqus_thread"></div>
-		<script>
-			var disqus_config = function () {
-			this.page.url = http://devdutt.ga/blog/articles/ac_sonometer.html;  // Replace PAGE_URL with your page's canonical URL variable
-			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-			};
-			(function() { // DON'T EDIT BELOW THIS LINE
-				var d = document,
-					s = d.createElement('script');
-				s.src = '//vimag.disqus.com/embed.js';
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view the comments on my articles.</noscript>
-	</section>
+	</div>
+	</div>
 
 	<footer>
 		<div>
@@ -152,6 +177,8 @@ int main()
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
+	<!--Prettify-->
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -164,7 +191,7 @@ int main()
 	<script src="https://cdn.jsdelivr.net/jquery.stellar/0.6.2/jquery.stellar.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-  <!--Disqus-->
+	<!--Disqus-->
 	<script id="dsq-count-scr" src="//bearly-speaking.disqus.com/count.js" async></script>
 
 </body>

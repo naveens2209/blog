@@ -6,6 +6,7 @@
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Black+Ops+One|Bungee|Bungee+Shade|Noto+Sans|Quicksand');
 body {
     font-family: "Work Sans", Arial, sans-serif;
     font-weight: 400;
@@ -58,10 +59,10 @@ a:hover, a:active, a:focus {
 }
 
 p, ul, ol {
-  margin-top: 10px;
-    margin-bottom: 30px;
-    font-size: 18px;
-    line-height: 38px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 h1, h2, h3, h4, h5, h6, figure {
@@ -69,6 +70,34 @@ h1, h2, h3, h4, h5, h6, figure {
     font-family: "Work Sans", Arial, sans-serif;
     font-weight: 400;
     margin: 0 0 30px 0;
+}
+
+h3 {
+    font-family: 'Black Ops One', sans-serif;
+    margin: 30px auto!important;
+    font-weight: 100!important;
+    font-size: 50px;
+}
+
+h4 {
+    font-family: 'Bungee Shade', 'Bungee', sans-serif!important;
+    margin: 30px auto!important;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h5 {
+    font-family: 'Bungee Shade', 'Bungee', sans-serif!important;
+    margin: 20px auto!important;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+h6 {
+    font-family: 'Quicksand', sans-serif!important;
+    margin: 20px auto!important;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 ::-webkit-selection {
@@ -979,12 +1008,17 @@ footer {
     opacity: 0;
 }
 
-pre{
-    background-color: #393939;
-    color: #f9f9f9;
-    font-family: courier, serif;
+pre {
+    background-color: #e2e2e2;
+    font-family: 'Anonymous Pro', monospace;
     font-size: 15px;
     font-style: normal;
-    margin: auto -200px;
-    padding: auto 10px;
+    border-radius: 19px 20px 20px 20px;
+    margin: auto inherit;
+    margin-bottom: 10px;
+    padding: 10px 20px!important;
+}
+
+#disqus_thread{
+  margin-top: 40px;
 }
