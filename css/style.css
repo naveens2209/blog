@@ -13,7 +13,10 @@
     font-style: normal;
 }
 
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Bungee|Bungee+Shade|Noto+Sans|Quicksand');
+=======
+>>>>>>> parent of 9eca05d... Updated
 body {
     font-family: "Work Sans", Arial, sans-serif;
     font-weight: 400;
@@ -70,10 +73,10 @@ a:visited{
 }
 
 p, ul, ol {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    line-height: 20px;
+  margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 38px;
 }
 
 h1, h2, h3, h4, h5, h6, figure {
@@ -83,6 +86,7 @@ h1, h2, h3, h4, h5, h6, figure {
     margin: 0 0 30px 0;
 }
 
+<<<<<<< HEAD
 h3 {
     font-family: 'One Day', sans-serif;
     margin: 30px auto!important;
@@ -111,6 +115,8 @@ h6 {
     font-weight: 500;
 }
 
+=======
+>>>>>>> parent of 9eca05d... Updated
 ::-webkit-selection {
     color: #fff;
     background: #ffa929;
@@ -1019,17 +1025,12 @@ footer {
     opacity: 0;
 }
 
-pre {
-    background-color: #e2e2e2;
-    font-family: 'Anonymous Pro', monospace;
+pre{
+    background-color: #393939;
+    color: #f9f9f9;
+    font-family: courier, serif;
     font-size: 15px;
     font-style: normal;
-    border-radius: 19px 20px 20px 20px;
-    margin: auto inherit;
-    margin-bottom: 10px;
-    padding: 10px 20px!important;
-}
-
-#disqus_thread{
-  margin-top: 40px;
+    margin: auto -200px;
+    padding: auto 10px;
 }
