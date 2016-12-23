@@ -5,8 +5,15 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'One Day';
+    src: url("../fonts/ONEDAY/ONEDAY.woff");
+    src: url("../fonts/icomoon/ONEDAY/ONEDAY.otf") format("opentype"), url("..fonts/ONEDAY/ONEDAY.ttf") format("truetype"), url("../fonts/ONEDAY/ONEDAY.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Black+Ops+One|Bungee|Bungee+Shade|Noto+Sans|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Bungee|Bungee+Shade|Noto+Sans|Quicksand');
 body {
     font-family: "Work Sans", Arial, sans-serif;
     font-weight: 400;
@@ -46,7 +53,7 @@ body {
 }
 
 a {
-    color: #ffa929;
+    color: #323232;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -56,6 +63,10 @@ a:hover, a:active, a:focus {
     color: #ffa929;
     outline: none;
     text-decoration: none;
+}
+
+a:visited{
+  color: #c3c3c3;
 }
 
 p, ul, ol {
@@ -73,7 +84,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 h3 {
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'One Day', sans-serif;
     margin: 30px auto!important;
     font-weight: 100!important;
     font-size: 50px;
