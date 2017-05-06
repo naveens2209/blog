@@ -35,7 +35,6 @@ body {
 }
 
 .row {
-    max-width: 900px;
     margin: 20px auto 0;
     width: 61.8%;
     float: right;
@@ -48,6 +47,14 @@ body {
     padding: 0 1.7rem;
     margin-bottom: 4rem;
     width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        float: none;
+        padding: 0 1.7rem;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -94,7 +101,7 @@ body {
 
 .card .wrapper {
     background-color: #fff;
-    min-height: 540px;
+    min-height: 30em;
     position: relative;
     overflow: hidden;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
