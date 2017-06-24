@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'icomoon';
-    src: url("/fonts/icomoon/icomoon.eot?srf3rx");
-    src: url("/fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("/fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("/fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("/fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+    src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+    src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -276,11 +276,8 @@ a:visited {
 p, ul, ol {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
-}
-p{
-  text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6, figure {
@@ -790,6 +787,7 @@ footer {
 }
 
 .fh5co-post .fh5co-entry {
+    float: left;
     width: 100%;
     border-bottom: 1px solid #f2f2f2;
 }
@@ -1238,7 +1236,6 @@ pre {
     border-radius: 19px 20px 20px 20px;
     margin: auto inherit;
     margin-bottom: 10px;
-    overflow-x: scroll;
     padding: 10px 20px!important;
 }
 
