@@ -22,7 +22,8 @@
 <!--Links-->
 
 
-<link rel="canonical" href="http://localhost:9926/cpp/16-07/Building-a-C++-application-to-cheat-the-readings/">  
+<link rel="canonical" href="http://localhost:9926/cpp/16-07/Building-a-C++-application-to-cheat-the-readings/"> 
+<link rel="next" href="http://localhost:9926/16-09/codes-are-magic-spells/" title="Codes are Magic spells...">  
 
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -143,40 +144,58 @@
           <div>
             <h3 id="program-files">Program files</h3>
 <p>There are actually two files in this Set. The first of these programs is ‘find.cpp’. find was built as a program to calculate the length of A.C. Sonometer wire which gives the correct reading, which we are looking for.</p>
-<h4 id="header-files">Header files</h4>
-<div class="highlighter-rouge"><pre class="highlight"><code>#include &amp;#60;iostream&amp;#62;
-#include &amp;#60;math.h&amp;#62;
-
-using namespace std;
-
-float calc(float t,float u,float l){
-return sqrt(t)/(2*l*sqrt(u));
+<h5 id="header-files">Header files</h5>
+<div class="highlighter-rouge"><pre class="highlight"><code>#include &lt;iostream&gt;;
+#include &lt;math.h&gt;;
+</code></pre>
+</div>
+<h5 id="define-the-namespace">Define the namespace</h5>
+<div class="highlighter-rouge"><pre class="highlight"><code>using namespace std;
+</code></pre>
+</div>
+<h4 id="declare-functions">Declare functions</h4>
+<h6 id="calc">calc():</h6>
+<p>It is a function to calculate this formula <img src="/images/eqnt.png" alt="Equation" /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>float calc(float t,float u,float l){
+  return sqrt(t)/(2*l*sqrt(u));
 }
-float ten(float x){
-return x*0.0098;
+</code></pre>
+</div>
+<h6 id="ten">ten():</h6>
+<p>A function to multiply above value with the value of acelleration due to gravity ‘g’</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>float ten(float x){
+  return x*0.0098;
 }
-float com(float x1, float x2){
-return(x1+x2)/200;
+</code></pre>
+</div>
+<h6 id="com">com():</h6>
+<p>Get a mean value and then divide it by 100 to get a fractional value</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>float com(float x1, float x2){
+  return(x1+x2)/200;
 }
-int main()
+</code></pre>
+</div>
+<h6 id="main">main():</h6>
+<p>The function which is used to call the other functions and arrange the running of the program</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>int main()
 {
-int w;
-float n,t,u,l1,l2,l;
-cout&lt;&lt;"Calculate Frequency of AC from lengths on Sonometer!!\n";
-cout&lt;&lt;"What are the lengths?(cm)\nl.1:";
-cin&gt;&gt;l1;
-cout&lt;&lt;"l.2:";
-cin&gt;&gt;l2;
-l=com(l1,l2);
-cout&lt;&lt;"Mean length = "&lt;&lt; l &lt;&lt;" What is the value of weights(g)? ";
-cin&gt;&gt;w;
-t= ten(w);
-cout&lt;&lt;"Tension = "&lt;&lt; t;
-cout&lt;&lt;" Kgm/s\nWhat is the value of linear density of wire U(g/m)?\n";
-cin&gt;&gt;u;
-n=calc(t,u,l);
-cout&lt;&lt;"\nTherefore frequency of AC is "&lt;&lt; n &lt;&lt;" Hz\n";
-return 0;
+  int w;
+  float n,t,u,l1,l2,l;
+  cout&lt;&lt;"Calculate Frequency of AC from lengths on Sonometer!!\n";
+  cout&lt;&lt;"What are the lengths?(cm)\nl.1:";
+  cin&gt;&gt;l1;
+  cout&lt;&lt;"l.2:";
+  cin&gt;&gt;l2;
+  l=com(l1,l2);
+  cout&lt;&lt;"Mean length = "&lt;&lt; l &lt;&lt;" What is the value of weights(g)? ";
+  cin&gt;&gt;w;
+  t= ten(w);
+  cout&lt;&lt;"Tension = "&lt;&lt; t;
+  cout&lt;&lt;" Kgm/s\nWhat is the value of linear density of wire U(g/m)?\n";
+  cin&gt;&gt;u;
+  n=calc(t,u,l);
+  cout&lt;&lt;"\nTherefore frequency of AC is "&lt;&lt; n &lt;&lt;" Hz\n";
+  return 0;
 }
 </code></pre>
 </div>
@@ -217,6 +236,20 @@ return 0;
 
     <div class="fh5co-navigation">
       
+      
+      <div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url({ page.next.image.thumb | prepend: site.baseurl_featured_img })">
+        <div class="overlay"></div>
+        <a class="copy" href="https://geekhub.ga/codes-are-magic-spells-7197dd63e6b1#.yiiianvb2">
+          <div class="display-t">
+            <div class="display-tc">
+              <div>
+                <span>Previous Post</span>
+                <h2>Codes are Magic spells</h2>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
       
     </div>
   </div>
