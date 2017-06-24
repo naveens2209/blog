@@ -1,22 +1,24 @@
+/*icomoon font*/
 @font-face {
     font-family: 'icomoon';
-    src: url("/fonts/icomoon/icomoon.eot?srf3rx");
-    src: url("/fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("/fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("/fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("/fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/bootcards/1.1.2/fonts/icomoon.eot?srf3rx");
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/bootcards/1.1.2/fonts/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("https://cdnjs.cloudflare.com/ajax/libs/bootcards/1.1.2/fonts/icomoon.ttf?srf3rx") format("truetype"), url("https://cdnjs.cloudflare.com/ajax/libs/bootcards/1.1.2/fonts/icomoon.woff?srf3rx") format("woff"), url("https://cdnjs.cloudflare.com/ajax/libs/bootcards/1.1.2/fonts/icomoon.svg?srf3rx#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'One Day';
-    src: url("../fonts/ONEDAY/ONEDAY.woff");
-    src: url("../fonts/icomoon/ONEDAY/ONEDAY.otf") format("opentype"), url("..fonts/ONEDAY/ONEDAY.ttf") format("truetype"), url("../fonts/ONEDAY/ONEDAY.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Anonymous+Pro|Patrick+Hand+SC|Bungee|Noto+Sans|Quicksand');
 
-@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Bungee|Bungee+Shade|Noto+Sans|Quicksand');
+font-family: 'Indie Flower', cursive;
+font-family: 'Patrick Hand SC', cursive;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Anonuymous Pro', monospace;
+
+
+/*Start defining styles*/
 body {
-    font-family: "Work Sans", Arial, sans-serif;
+    font-family: "Noto Sans", Arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
@@ -94,7 +96,7 @@ body {
     top: 0;
     font-size: 10px;
     font-weight: 700;
-    font-family: 'Open Sans';
+    font-family: 'Noto Sans';
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
 }
@@ -285,34 +287,34 @@ p{
 
 h1, h2, h3, h4, h5, h6, figure {
     color: #000;
-    font-family: "Work Sans", Arial, sans-serif;
+    font-family: "Noto Sans", Arial, sans-serif;
     font-weight: 400;
     margin: 0 0 30px 0;
 }
 
 h3 {
-    font-family: 'One Day', sans-serif;
+    font-family: 'Patrick Hand SC', sans-serif;
     margin: 30px auto!important;
     font-weight: 100!important;
     font-size: 50px;
 }
 
 h4 {
-    font-family: 'Bungee Shade', 'Bungee', sans-serif!important;
+    font-family: 'Indie Flower', 'Bungee', sans-serif!important;
     margin: 30px auto!important;
     font-weight: 700;
     font-size: 30px;
 }
 
 h5 {
-    font-family: 'Bungee Shade', 'Bungee', sans-serif!important;
+    font-family: 'Indie Flower', 'Bungee', sans-serif!important;
     margin: 20px auto!important;
     font-weight: 600;
     font-size: 25px;
 }
 
 h6 {
-    font-family: 'Quicksand', sans-serif!important;
+    font-family: 'Patrick Hand SC', sans-serif!important;
     margin: 20px auto!important;
     font-size: 16px;
     font-weight: 500;
@@ -387,7 +389,7 @@ h6 {
     text-transform: uppercase;
     font-weight: bold;
     font-weight: 700;
-    font-family: "Work Sans", Arial, sans-serif;
+    font-family: "Noto Sans", Arial, sans-serif;
 }
 
 .fh5co-nav #fh5co-logo a span {
@@ -1014,7 +1016,7 @@ footer {
 .btn {
     margin-right: 4px;
     margin-bottom: 4px;
-    font-family: "Work Sans", Arial, sans-serif;
+    font-family: "Noto Sans", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     -webkit-border-radius: 30px;
@@ -1242,8 +1244,27 @@ pre {
     padding: 10px 20px!important;
 }
 
+/*Disqus*/
 #disqus_thread {
-    margin-top: 40px;
-    margin: auto -200px;
-    padding: auto 10px;
+color: #ffffff;
+border-style: 0px solid;
+border-color: #cccccc;
+padding: 5px;
+}
+
+#dsq-content #dsq-comments .dsq-comment-body {
+color: #fff;
+background-color: #000000;
+}
+
+.dsq-reaction-body {
+color: #fff;
+}
+
+.dsq-reaction-header cite, .dsq-reaction-header span {
+color: #ccc;
+}
+
+.dsq-reaction-retweets {
+color: #ccc;
 }
