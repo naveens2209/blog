@@ -17,6 +17,19 @@ font-family: 'Anonuymous Pro', monospace;
 
 
 /*Start defining styles*/
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Open Sans ", sans-serif;
+  font-weight: 300;
+}
+
 body {
     font-family: "Noto Sans", Arial, sans-serif;
     font-weight: 400;
