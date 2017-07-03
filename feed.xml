@@ -3,26 +3,32 @@
   <channel>
     <title>BEARly Speaking</title>
     <description>Devdutt blogs about anything that intrigues him, not only in the coding world, but some...</description>
-    <link>http://blog.devdutt.ga</link>
-    <atom:link href="http://blog.devdutt.ga/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:9926</link>
+    <atom:link href="http://localhost:9926/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+        <title>github</title>
+        <description></description>
+        <pubDate>Sat, 01 Jul 2017 00:00:00 +0530</pubDate>
+        <link>http://localhost:9926//github/</link>
+        <guid isPermaLink="true">http://localhost:9926//github/</guid>
+      </item><item>
         <title>How to build a Chatbot in C++</title>
         <description>Mixing my love for AI and the CS sylabus in school.</description>
         <pubDate>Fri, 28 Oct 2016 12:00:00 +0530</pubDate>
-        <link>http://blog.devdutt.ga//cpp/16-10/Howto-build-Chatbot-C++/</link>
-        <guid isPermaLink="true">http://blog.devdutt.ga//cpp/16-10/Howto-build-Chatbot-C++/</guid>
+        <link>http://localhost:9926//cpp/16-10/Howto-build-Chatbot-C++/</link>
+        <guid isPermaLink="true">http://localhost:9926//cpp/16-10/Howto-build-Chatbot-C++/</guid>
       </item><item>
         <title>Codes are Magic spells...</title>
         <description>…the Command line is your wand and Algorithms your signature.</description>
         <pubDate>Wed, 14 Sep 2016 12:00:00 +0530</pubDate>
-        <link>http://blog.devdutt.ga//16-09/codes-are-magic-spells/</link>
-        <guid isPermaLink="true">http://blog.devdutt.ga//16-09/codes-are-magic-spells/</guid>
+        <link>http://localhost:9926//16-09/codes-are-magic-spells/</link>
+        <guid isPermaLink="true">http://localhost:9926//16-09/codes-are-magic-spells/</guid>
       </item><item>
         <title>Building a C++ Application to cheat the readings</title>
         <description>Breakneck speed programming and the law breaker.</description>
         <pubDate>Sat, 16 Jul 2016 12:00:00 +0530</pubDate>
-        <link>http://blog.devdutt.ga//cpp/16-07/Building-a-C++-application-to-cheat-the-readings/</link>
-        <guid isPermaLink="true">http://blog.devdutt.ga//cpp/16-07/Building-a-C++-application-to-cheat-the-readings/</guid>
+        <link>http://localhost:9926//cpp/16-07/Building-a-C++-application-to-cheat-the-readings/</link>
+        <guid isPermaLink="true">http://localhost:9926//cpp/16-07/Building-a-C++-application-to-cheat-the-readings/</guid>
       </item>
   </channel>
 </rss>
