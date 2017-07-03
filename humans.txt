@@ -28,7 +28,6 @@ http://jekyllrb.com/
 
 jQuery
 http://jquery.com/
-s
 
 Github
 https://github.com/
